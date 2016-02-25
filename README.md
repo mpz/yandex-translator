@@ -3,7 +3,8 @@
 # Yandex::Translator
 
 Library for Yandex Translate API | Библиотека для API Яндекс.Переводчика
-Support for ruby 1.8.x
+
+## Support for ruby 1.8.x
 
 
 ## Installation
