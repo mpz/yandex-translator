@@ -56,7 +56,7 @@ module Yandex
     end
 
     def visit(address, options = {})
-      response = self.class.post address, body: options.merge(key: api_key)
+      response = self.class.post address, body: options.merge(:key => api_key)
       check_errors(response)
       response
     end
