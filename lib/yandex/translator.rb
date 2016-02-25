@@ -48,7 +48,7 @@ module Yandex
         lang = [lang_options[:to], lang_options[:from]].compact
       end
 
-      options = { text: text, lang: lang.reverse.join('-') }
+      options = { :text => text, :lang => lang.reverse.join('-') }
 
       result = visit('/translate', options)['text']
 
@@ -56,7 +56,7 @@ module Yandex
     end
 
     def visit(address, options = {})
-      response = self.class.post address, body: options.merge(:key => api_key)
+      response = self.class.post address, :body => options.merge(:key => api_key)
       check_errors(response)
       response
     end
